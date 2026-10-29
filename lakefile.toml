@@ -1,0 +1,18 @@
+name = "salem"
+version = "0.1.0"
+defaultTargets = ["Salem", "SalemNodes"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.35.0"
+
+[[lean_lib]]
+name = "Salem"
+srcDir = "spec"
+roots = ["STATEMENT"]
+
+[[lean_lib]]
+name = "SalemNodes"
+srcDir = "."
+roots = ["Salem.BernoulliFourier", "Salem.CosineTail", "Salem.ElementaryGeneric", "Salem.EntropyCover", "Salem.FiniteEntropy", "Salem.FourierBias", "Salem.LacunaryProduct", "Salem.P1Analytic", "Salem.P2CoefficientTails", "Salem.P2Coefficients", "Salem.RationalIntervals", "Salem.Restoration", "Salem.AtomSeparation", "Salem.BlockGridEntropy", "Salem.GreenKernel", "Salem.GridEntropy", "Salem.MirrorAction", "Salem.P1Returns", "Salem.P2GreenCore", "Salem.P2GreenIntervals", "Salem.P2Returns", "Salem.QuantitativeEntropy", "Salem.QuarticClassificationCore", "Salem.P1CoefficientBounds", "Salem.P1Green", "Salem.P2GreenData", "Salem.P2Neutral", "Salem.P2RootFactorization", "Salem.QuantitativeBernoulliCore", "Salem.QuantitativeRootCore", "Salem.QuarticDimensionCore", "Salem.RationalPotential", "Salem.DirectDifferenceAction", "Salem.IntervalData", "Salem.MirrorOrbit", "Salem.P1ActualQuantitative", "Salem.P1MirrorBudgets", "Salem.P1Mirrors", "Salem.P1Wave", "Salem.P2ActualQuantitative", "Salem.P2CoreAssembly", "Salem.P2CoreBudgetTotal", "Salem.P2CoreCertificate", "Salem.P2CoreChecks", "Salem.P2CoreChecks.Block00", "Salem.P2CoreChecks.Block01", "Salem.P2CoreChecks.Block02", "Salem.P2CoreChecks.Block03", "Salem.P2CoreChecks.Block04", "Salem.P2CoreChecks.Block05", "Salem.P2CoreChecks.Block06", "Salem.P2CoreChecks.Block07", "Salem.P2CoreChecks.Block08", "Salem.P2CoreChecks.Block09", "Salem.P2CoreChecks.Block10", "Salem.P2CoreChecks.Block11", "Salem.P2CoreChecks.Block12", "Salem.P2CoreChecks.Block13", "Salem.P2CoreChecks.Block14", "Salem.P2CoreChecks.Block15", "Salem.P2CoreChecks.Block16", "Salem.P2CoreChecks.Block17", "Salem.P2CoreChecks.Block18", "Salem.P2CoreChecks.Block19", "Salem.P2CoreChecks.Block20", "Salem.P2CoreChecks.Block21", "Salem.P2CoreChecks.Block22", "Salem.P2CoreData", "Salem.P2DirectBudgets", "Salem.P2FastEvaluation", "Salem.P2FiniteData", "Salem.P2FourierOrbit", "Salem.P2GreenForcing", "Salem.P2GreenModeData", "Salem.P2GreenModes", "Salem.P2RestorationBudget", "Salem.RationalPotentialData"]

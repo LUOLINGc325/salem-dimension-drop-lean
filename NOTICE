@@ -1,0 +1,19 @@
+salem-dimension-drop-lean
+Copyright 2026 LUOLINGc325
+
+This repository is licensed under the Apache License, Version 2.0 (see LICENSE).
+All files in it were written for this project.
+
+The mathematics formalized here (theorems and proofs) is that of the paper
+"Strict Hausdorff-dimension drop for Quartic Salem Bernoulli convolutions"
+by Guozheng Cheng, Xiang Fang, Xueqing Ma and Hongli Zhang (arXiv:2610.12072v2).
+The paper itself is not included. This repository is an independent
+formalization and is not affiliated with or endorsed by the paper's authors.
+
+Dependencies that are NOT included (fetched by Lake at build time)
+------------------------------------------------------------------
+Lean 4 (https://github.com/leanprover/lean4, toolchain v4.35.0) and Mathlib
+(https://github.com/leanprover-community/mathlib4, tag v4.35.0, revision
+56a005855ea17e0b0958f73ec801ae140b0a1679), both Apache-2.0, together with
+Mathlib's own dependencies, each under the license of its own repository.
+Their exact revisions are recorded in lake-manifest.json.

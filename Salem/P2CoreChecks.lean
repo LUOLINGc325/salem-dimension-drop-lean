@@ -1,0 +1,403 @@
+module
+
+public import Mathlib.Tactic.IntervalCases
+public import Salem.P2CoreChecks.Block00
+public import Salem.P2CoreChecks.Block01
+public import Salem.P2CoreChecks.Block02
+public import Salem.P2CoreChecks.Block03
+public import Salem.P2CoreChecks.Block04
+public import Salem.P2CoreChecks.Block05
+public import Salem.P2CoreChecks.Block06
+public import Salem.P2CoreChecks.Block07
+public import Salem.P2CoreChecks.Block08
+public import Salem.P2CoreChecks.Block09
+public import Salem.P2CoreChecks.Block10
+public import Salem.P2CoreChecks.Block11
+public import Salem.P2CoreChecks.Block12
+public import Salem.P2CoreChecks.Block13
+public import Salem.P2CoreChecks.Block14
+public import Salem.P2CoreChecks.Block15
+public import Salem.P2CoreChecks.Block16
+public import Salem.P2CoreChecks.Block17
+public import Salem.P2CoreChecks.Block18
+public import Salem.P2CoreChecks.Block19
+public import Salem.P2CoreChecks.Block20
+public import Salem.P2CoreChecks.Block21
+public import Salem.P2CoreChecks.Block22
+
+@[expose] public section
+
+namespace Salem
+
+set_option maxRecDepth 100000
+set_option maxHeartbeats 1000000
+
+/-- Every finite coordinate check is supplied by a separate closed kernel certificate. -/
+theorem p2Core_all_checks (k : Fin 361) :
+    (∀ j : Fin 8, p2CoreRadiusAt (8 * k.val + j.val) ≤ (2 / 5 : ℚ)) ∧
+      p2CoreChunkTicks k.val ≤ p2CoreChunkBudget k.val := by
+  rcases k with ⟨k, hk⟩
+  interval_cases k
+  · exact p2CoreCheck000
+  · exact p2CoreCheck001
+  · exact p2CoreCheck002
+  · exact p2CoreCheck003
+  · exact p2CoreCheck004
+  · exact p2CoreCheck005
+  · exact p2CoreCheck006
+  · exact p2CoreCheck007
+  · exact p2CoreCheck008
+  · exact p2CoreCheck009
+  · exact p2CoreCheck010
+  · exact p2CoreCheck011
+  · exact p2CoreCheck012
+  · exact p2CoreCheck013
+  · exact p2CoreCheck014
+  · exact p2CoreCheck015
+  · exact p2CoreCheck016
+  · exact p2CoreCheck017
+  · exact p2CoreCheck018
+  · exact p2CoreCheck019
+  · exact p2CoreCheck020
+  · exact p2CoreCheck021
+  · exact p2CoreCheck022
+  · exact p2CoreCheck023
+  · exact p2CoreCheck024
+  · exact p2CoreCheck025
+  · exact p2CoreCheck026
+  · exact p2CoreCheck027
+  · exact p2CoreCheck028
+  · exact p2CoreCheck029
+  · exact p2CoreCheck030
+  · exact p2CoreCheck031
+  · exact p2CoreCheck032
+  · exact p2CoreCheck033
+  · exact p2CoreCheck034
+  · exact p2CoreCheck035
+  · exact p2CoreCheck036
+  · exact p2CoreCheck037
+  · exact p2CoreCheck038
+  · exact p2CoreCheck039
+  · exact p2CoreCheck040
+  · exact p2CoreCheck041
+  · exact p2CoreCheck042
+  · exact p2CoreCheck043
+  · exact p2CoreCheck044
+  · exact p2CoreCheck045
+  · exact p2CoreCheck046
+  · exact p2CoreCheck047
+  · exact p2CoreCheck048
+  · exact p2CoreCheck049
+  · exact p2CoreCheck050
+  · exact p2CoreCheck051
+  · exact p2CoreCheck052
+  · exact p2CoreCheck053
+  · exact p2CoreCheck054
+  · exact p2CoreCheck055
+  · exact p2CoreCheck056
+  · exact p2CoreCheck057
+  · exact p2CoreCheck058
+  · exact p2CoreCheck059
+  · exact p2CoreCheck060
+  · exact p2CoreCheck061
+  · exact p2CoreCheck062
+  · exact p2CoreCheck063
+  · exact p2CoreCheck064
+  · exact p2CoreCheck065
+  · exact p2CoreCheck066
+  · exact p2CoreCheck067
+  · exact p2CoreCheck068
+  · exact p2CoreCheck069
+  · exact p2CoreCheck070
+  · exact p2CoreCheck071
+  · exact p2CoreCheck072
+  · exact p2CoreCheck073
+  · exact p2CoreCheck074
+  · exact p2CoreCheck075
+  · exact p2CoreCheck076
+  · exact p2CoreCheck077
+  · exact p2CoreCheck078
+  · exact p2CoreCheck079
+  · exact p2CoreCheck080
+  · exact p2CoreCheck081
+  · exact p2CoreCheck082
+  · exact p2CoreCheck083
+  · exact p2CoreCheck084
+  · exact p2CoreCheck085
+  · exact p2CoreCheck086
+  · exact p2CoreCheck087
+  · exact p2CoreCheck088
+  · exact p2CoreCheck089
+  · exact p2CoreCheck090
+  · exact p2CoreCheck091
+  · exact p2CoreCheck092
+  · exact p2CoreCheck093
+  · exact p2CoreCheck094
+  · exact p2CoreCheck095
+  · exact p2CoreCheck096
+  · exact p2CoreCheck097
+  · exact p2CoreCheck098
+  · exact p2CoreCheck099
+  · exact p2CoreCheck100
+  · exact p2CoreCheck101
+  · exact p2CoreCheck102
+  · exact p2CoreCheck103
+  · exact p2CoreCheck104
+  · exact p2CoreCheck105
+  · exact p2CoreCheck106
+  · exact p2CoreCheck107
+  · exact p2CoreCheck108
+  · exact p2CoreCheck109
+  · exact p2CoreCheck110
+  · exact p2CoreCheck111
+  · exact p2CoreCheck112
+  · exact p2CoreCheck113
+  · exact p2CoreCheck114
+  · exact p2CoreCheck115
+  · exact p2CoreCheck116
+  · exact p2CoreCheck117
+  · exact p2CoreCheck118
+  · exact p2CoreCheck119
+  · exact p2CoreCheck120
+  · exact p2CoreCheck121
+  · exact p2CoreCheck122
+  · exact p2CoreCheck123
+  · exact p2CoreCheck124
+  · exact p2CoreCheck125
+  · exact p2CoreCheck126
+  · exact p2CoreCheck127
+  · exact p2CoreCheck128
+  · exact p2CoreCheck129
+  · exact p2CoreCheck130
+  · exact p2CoreCheck131
+  · exact p2CoreCheck132
+  · exact p2CoreCheck133
+  · exact p2CoreCheck134
+  · exact p2CoreCheck135
+  · exact p2CoreCheck136
+  · exact p2CoreCheck137
+  · exact p2CoreCheck138
+  · exact p2CoreCheck139
+  · exact p2CoreCheck140
+  · exact p2CoreCheck141
+  · exact p2CoreCheck142
+  · exact p2CoreCheck143
+  · exact p2CoreCheck144
+  · exact p2CoreCheck145
+  · exact p2CoreCheck146
+  · exact p2CoreCheck147
+  · exact p2CoreCheck148
+  · exact p2CoreCheck149
+  · exact p2CoreCheck150
+  · exact p2CoreCheck151
+  · exact p2CoreCheck152
+  · exact p2CoreCheck153
+  · exact p2CoreCheck154
+  · exact p2CoreCheck155
+  · exact p2CoreCheck156
+  · exact p2CoreCheck157
+  · exact p2CoreCheck158
+  · exact p2CoreCheck159
+  · exact p2CoreCheck160
+  · exact p2CoreCheck161
+  · exact p2CoreCheck162
+  · exact p2CoreCheck163
+  · exact p2CoreCheck164
+  · exact p2CoreCheck165
+  · exact p2CoreCheck166
+  · exact p2CoreCheck167
+  · exact p2CoreCheck168
+  · exact p2CoreCheck169
+  · exact p2CoreCheck170
+  · exact p2CoreCheck171
+  · exact p2CoreCheck172
+  · exact p2CoreCheck173
+  · exact p2CoreCheck174
+  · exact p2CoreCheck175
+  · exact p2CoreCheck176
+  · exact p2CoreCheck177
+  · exact p2CoreCheck178
+  · exact p2CoreCheck179
+  · exact p2CoreCheck180
+  · exact p2CoreCheck181
+  · exact p2CoreCheck182
+  · exact p2CoreCheck183
+  · exact p2CoreCheck184
+  · exact p2CoreCheck185
+  · exact p2CoreCheck186
+  · exact p2CoreCheck187
+  · exact p2CoreCheck188
+  · exact p2CoreCheck189
+  · exact p2CoreCheck190
+  · exact p2CoreCheck191
+  · exact p2CoreCheck192
+  · exact p2CoreCheck193
+  · exact p2CoreCheck194
+  · exact p2CoreCheck195
+  · exact p2CoreCheck196
+  · exact p2CoreCheck197
+  · exact p2CoreCheck198
+  · exact p2CoreCheck199
+  · exact p2CoreCheck200
+  · exact p2CoreCheck201
+  · exact p2CoreCheck202
+  · exact p2CoreCheck203
+  · exact p2CoreCheck204
+  · exact p2CoreCheck205
+  · exact p2CoreCheck206
+  · exact p2CoreCheck207
+  · exact p2CoreCheck208
+  · exact p2CoreCheck209
+  · exact p2CoreCheck210
+  · exact p2CoreCheck211
+  · exact p2CoreCheck212
+  · exact p2CoreCheck213
+  · exact p2CoreCheck214
+  · exact p2CoreCheck215
+  · exact p2CoreCheck216
+  · exact p2CoreCheck217
+  · exact p2CoreCheck218
+  · exact p2CoreCheck219
+  · exact p2CoreCheck220
+  · exact p2CoreCheck221
+  · exact p2CoreCheck222
+  · exact p2CoreCheck223
+  · exact p2CoreCheck224
+  · exact p2CoreCheck225
+  · exact p2CoreCheck226
+  · exact p2CoreCheck227
+  · exact p2CoreCheck228
+  · exact p2CoreCheck229
+  · exact p2CoreCheck230
+  · exact p2CoreCheck231
+  · exact p2CoreCheck232
+  · exact p2CoreCheck233
+  · exact p2CoreCheck234
+  · exact p2CoreCheck235
+  · exact p2CoreCheck236
+  · exact p2CoreCheck237
+  · exact p2CoreCheck238
+  · exact p2CoreCheck239
+  · exact p2CoreCheck240
+  · exact p2CoreCheck241
+  · exact p2CoreCheck242
+  · exact p2CoreCheck243
+  · exact p2CoreCheck244
+  · exact p2CoreCheck245
+  · exact p2CoreCheck246
+  · exact p2CoreCheck247
+  · exact p2CoreCheck248
+  · exact p2CoreCheck249
+  · exact p2CoreCheck250
+  · exact p2CoreCheck251
+  · exact p2CoreCheck252
+  · exact p2CoreCheck253
+  · exact p2CoreCheck254
+  · exact p2CoreCheck255
+  · exact p2CoreCheck256
+  · exact p2CoreCheck257
+  · exact p2CoreCheck258
+  · exact p2CoreCheck259
+  · exact p2CoreCheck260
+  · exact p2CoreCheck261
+  · exact p2CoreCheck262
+  · exact p2CoreCheck263
+  · exact p2CoreCheck264
+  · exact p2CoreCheck265
+  · exact p2CoreCheck266
+  · exact p2CoreCheck267
+  · exact p2CoreCheck268
+  · exact p2CoreCheck269
+  · exact p2CoreCheck270
+  · exact p2CoreCheck271
+  · exact p2CoreCheck272
+  · exact p2CoreCheck273
+  · exact p2CoreCheck274
+  · exact p2CoreCheck275
+  · exact p2CoreCheck276
+  · exact p2CoreCheck277
+  · exact p2CoreCheck278
+  · exact p2CoreCheck279
+  · exact p2CoreCheck280
+  · exact p2CoreCheck281
+  · exact p2CoreCheck282
+  · exact p2CoreCheck283
+  · exact p2CoreCheck284
+  · exact p2CoreCheck285
+  · exact p2CoreCheck286
+  · exact p2CoreCheck287
+  · exact p2CoreCheck288
+  · exact p2CoreCheck289
+  · exact p2CoreCheck290
+  · exact p2CoreCheck291
+  · exact p2CoreCheck292
+  · exact p2CoreCheck293
+  · exact p2CoreCheck294
+  · exact p2CoreCheck295
+  · exact p2CoreCheck296
+  · exact p2CoreCheck297
+  · exact p2CoreCheck298
+  · exact p2CoreCheck299
+  · exact p2CoreCheck300
+  · exact p2CoreCheck301
+  · exact p2CoreCheck302
+  · exact p2CoreCheck303
+  · exact p2CoreCheck304
+  · exact p2CoreCheck305
+  · exact p2CoreCheck306
+  · exact p2CoreCheck307
+  · exact p2CoreCheck308
+  · exact p2CoreCheck309
+  · exact p2CoreCheck310
+  · exact p2CoreCheck311
+  · exact p2CoreCheck312
+  · exact p2CoreCheck313
+  · exact p2CoreCheck314
+  · exact p2CoreCheck315
+  · exact p2CoreCheck316
+  · exact p2CoreCheck317
+  · exact p2CoreCheck318
+  · exact p2CoreCheck319
+  · exact p2CoreCheck320
+  · exact p2CoreCheck321
+  · exact p2CoreCheck322
+  · exact p2CoreCheck323
+  · exact p2CoreCheck324
+  · exact p2CoreCheck325
+  · exact p2CoreCheck326
+  · exact p2CoreCheck327
+  · exact p2CoreCheck328
+  · exact p2CoreCheck329
+  · exact p2CoreCheck330
+  · exact p2CoreCheck331
+  · exact p2CoreCheck332
+  · exact p2CoreCheck333
+  · exact p2CoreCheck334
+  · exact p2CoreCheck335
+  · exact p2CoreCheck336
+  · exact p2CoreCheck337
+  · exact p2CoreCheck338
+  · exact p2CoreCheck339
+  · exact p2CoreCheck340
+  · exact p2CoreCheck341
+  · exact p2CoreCheck342
+  · exact p2CoreCheck343
+  · exact p2CoreCheck344
+  · exact p2CoreCheck345
+  · exact p2CoreCheck346
+  · exact p2CoreCheck347
+  · exact p2CoreCheck348
+  · exact p2CoreCheck349
+  · exact p2CoreCheck350
+  · exact p2CoreCheck351
+  · exact p2CoreCheck352
+  · exact p2CoreCheck353
+  · exact p2CoreCheck354
+  · exact p2CoreCheck355
+  · exact p2CoreCheck356
+  · exact p2CoreCheck357
+  · exact p2CoreCheck358
+  · exact p2CoreCheck359
+  · exact p2CoreCheck360
+
+end Salem
